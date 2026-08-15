@@ -205,12 +205,10 @@ footer{border-top:1px solid var(--border);padding:30px 0;
       <a class="btn" href="https://github.com/noumansiddiq" target="_blank" rel="noopener">◆ GitHub</a>
     </div>
 
-    <!-- EDIT: once the Olist project is finished, change "2" to "3" and you can
-         swap the Google tile for: 100K+ / Orders analysed in SQL -->
     <div class="stats">
       <div class="stat"><div class="stat-n">3 yrs</div><div class="stat-l">Business operations</div></div>
-      <div class="stat"><div class="stat-n">2</div><div class="stat-l">End-to-end projects shipped</div></div>
-      <div class="stat"><div class="stat-n">Google</div><div class="stat-l">Data Analytics certified</div></div>
+      <div class="stat"><div class="stat-n">3</div><div class="stat-l">End-to-end projects shipped</div></div>
+      <div class="stat"><div class="stat-n">96K+</div><div class="stat-l">Orders analysed in SQL</div></div>
       <div class="stat"><div class="stat-n">B.Tech</div><div class="stat-l">CSE · JNTUH 2026</div></div>
     </div>
   </div>
@@ -226,24 +224,22 @@ footer{border-top:1px solid var(--border);padding:30px 0;
       <div class="proj-top">
         <div class="proj-title">E-Commerce Sales &amp; Customer Retention Analysis</div>
         <span class="badge b-flag">Flagship</span>
-        <span class="badge b-prog">In progress</span>
+        <span class="badge b-done">Complete</span>
       </div>
-      <div class="proj-sub">100,000 marketplace orders · 9-table relational schema · SQL + Power BI</div>
+      <div class="proj-sub">96,478 delivered orders · R$15.4M GMV · 9-table relational schema · SQL</div>
 
       <p class="proj-body">
-        Currently building. A marketplace is growing its top line — the question I'm framing is whether
-        it is actually <strong>healthy</strong>, because revenue growth hides a broken retention engine
-        very well. Nine normalised tables, so this gets answered in SQL rather than in a single dataframe.
+        A marketplace was growing its top line. The question I framed was whether it was actually
+        <strong>healthy</strong> — revenue growth hides a broken retention engine very well.
+        Nine normalised tables, so this was answered in SQL rather than in a single dataframe.
       </p>
 
-      <!-- EDIT: replace this block with your real findings once the queries are run.
-           Use the <ul class="findings"> list format from the projects below. -->
-      <p class="proj-body">
-        <strong>What I'm answering:</strong> whether delivery performance or product quality drives
-        review scores; where in the fulfilment chain delay actually accumulates; what share of customers
-        ever return; and how concentrated revenue is across sellers. Findings and the Power BI dashboard
-        land here shortly.
-      </p>
+      <ul class="findings">
+        <li><strong>A late order is 7.9× more likely to get 1 star.</strong> Orders arriving 15+ days late average 1.72 stars against 4.30 for early deliveries. Late orders are just 6.8% of volume but produce 36.5% of all 1-star reviews.</li>
+        <li><strong>I was wrong about the bottleneck — and the data said so.</strong> I expected slow seller dispatch. Decomposing delivery into three stages showed last-mile carrier transit takes 9.33 days against 2.80 for seller handover: 74% of the timeline, 3.3× larger. The fix is carrier routing, not seller SLAs.</li>
+        <li><strong>A 3.00% repeat purchase rate.</strong> 90,557 of 93,358 customers ordered exactly once. The business runs almost entirely on paid acquisition with no retention offset.</li>
+        <li><strong>29 sellers generate 25.5% of GMV.</strong> Out of 2,970. Concentration risk invisible on any dashboard reporting totals only.</li>
+      </ul>
 
       <div class="tags">
         <span class="tag">PostgreSQL</span><span class="tag">CTEs</span><span class="tag">Window functions</span>
