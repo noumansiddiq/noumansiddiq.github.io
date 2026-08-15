@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nouman Siddiq — Data Analyst | SQL, Python, Power BI</title>
+<meta name="description" content="Data Analyst in Hyderabad. SQL, Python, Power BI. Google Data Analytics certified. Available immediately for Data Analyst roles in Hyderabad, Bangalore or remote.">
+<meta name="author" content="Nouman Siddiq">
+
+<!-- Open Graph: controls how the link looks when shared on LinkedIn/WhatsApp -->
+<meta property="og:title" content="Nouman Siddiq — Data Analyst">
+<meta property="og:description" content="SQL · Python · Power BI. Google Data Analytics certified. Available immediately.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d1117'/><text y='68' x='50' text-anchor='middle' font-size='55' font-family='sans-serif' font-weight='700' fill='%2338bdf8'>N</text></svg>">
+
+<style>
+:root{
+  --bg:#0a0e14;
+  --bg-soft:#111721;
+  --bg-card:#141b26;
+  --border:#222c3a;
+  --border-lit:#2f3d50;
+  --text:#e8edf4;
+  --text-dim:#9aa8bb;
+  --text-faint:#6b7a8f;
+  --accent:#38bdf8;
+  --accent-dim:#0e7490;
+  --good:#4ade80;
+  --warn:#fbbf24;
+  --radius:12px;
+  --max:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:72px 0;border-top:1px solid var(--border)}
+h2{
+  font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:8px;
+}
+.sec-title{font-size:29px;font-weight:700;letter-spacing:-.02em;margin-bottom:32px;line-height:1.25}
+
+/* ---------- NAV ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,14,20,.86);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-in{max-width:var(--max);margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px}
+.nav-name{font-weight:700;font-size:15px;color:var(--text);letter-spacing:-.01em}
+.nav-links{display:flex;gap:24px;margin-left:auto;font-size:14px}
+.nav-links a{color:var(--text-dim);font-weight:500}
+.nav-links a:hover{color:var(--text);text-decoration:none}
+@media(max-width:720px){.nav-links{display:none}}
+
+/* ---------- HERO ---------- */
+header{padding:88px 0 76px}
+.status{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(74,222,128,.09);border:1px solid rgba(74,222,128,.28);
+  color:var(--good);font-size:13px;font-weight:600;
+  padding:7px 15px;border-radius:100px;margin-bottom:26px;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--good);
+  box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{
+  70%{box-shadow:0 0 0 9px rgba(74,222,128,0)}
+  100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}
+}
+h1{font-size:clamp(38px,6.4vw,62px);font-weight:800;letter-spacing:-.035em;line-height:1.05;margin-bottom:20px}
+h1 .grad{background:linear-gradient(102deg,var(--accent),#818cf8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.lede{font-size:19px;color:var(--text-dim);max-width:660px;margin-bottom:14px;line-height:1.6}
+.lede strong{color:var(--text);font-weight:600}
+.meta{font-size:15px;color:var(--text-faint);margin-bottom:32px}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:44px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:9px;font-size:15px;font-weight:600;
+  border:1px solid var(--border-lit);color:var(--text);
+  transition:all .16s ease;
+}
+.btn:hover{text-decoration:none;border-color:var(--accent);transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#05141c;border-color:var(--accent)}
+.btn-primary:hover{background:#7dd3fc;border-color:#7dd3fc}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+  background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.stat{background:var(--bg-soft);padding:22px 20px}
+.stat-n{font-size:27px;font-weight:700;color:var(--text);letter-spacing:-.02em;line-height:1.2}
+.stat-l{font-size:13px;color:var(--text-faint);margin-top:3px}
+
+/* ---------- PROJECTS ---------- */
+.proj{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:30px;margin-bottom:20px;transition:border-color .18s ease;
+}
+.proj:hover{border-color:var(--border-lit)}
+.proj-top{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px;margin-bottom:6px}
+.proj-title{font-size:21px;font-weight:700;letter-spacing:-.015em;flex:1;min-width:240px;line-height:1.35}
+.badge{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  padding:5px 11px;border-radius:100px;white-space:nowrap}
+.b-flag{background:rgba(56,189,248,.12);color:var(--accent);border:1px solid rgba(56,189,248,.3)}
+.b-prog{background:rgba(251,191,36,.11);color:var(--warn);border:1px solid rgba(251,191,36,.28)}
+.b-done{background:rgba(74,222,128,.1);color:var(--good);border:1px solid rgba(74,222,128,.26)}
+.proj-sub{font-size:14px;color:var(--text-faint);margin-bottom:16px}
+.proj-body{color:var(--text-dim);font-size:15.5px;margin-bottom:18px}
+.proj-body strong{color:var(--text);font-weight:600}
+
+.findings{list-style:none;margin:0 0 18px}
+.findings li{position:relative;padding-left:22px;margin-bottom:9px;color:var(--text-dim);font-size:15px}
+.findings li::before{content:"";position:absolute;left:4px;top:10px;width:5px;height:5px;
+  border-radius:50%;background:var(--accent-dim)}
+.findings li strong{color:var(--text);font-weight:600}
+
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.tag{font-size:12.5px;padding:4px 11px;border-radius:6px;
+  background:var(--bg-soft);border:1px solid var(--border);color:var(--text-dim)}
+.proj-links{display:flex;flex-wrap:wrap;gap:18px;font-size:14.5px;font-weight:600}
+
+/* ---------- SKILLS ---------- */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.skill-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.skill-h{font-size:15px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.skill-h span{font-size:17px}
+.skill-list{display:flex;flex-wrap:wrap;gap:7px}
+
+/* ---------- EXPERIENCE ---------- */
+.exp{border-left:2px solid var(--border);padding-left:26px;margin-left:5px}
+.job{position:relative;padding-bottom:30px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-33px;top:7px;width:11px;height:11px;
+  border-radius:50%;background:var(--bg);border:2px solid var(--border-lit)}
+.job.now::before{background:var(--accent);border-color:var(--accent)}
+.job-role{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.job-org{font-size:14.5px;color:var(--accent);margin-bottom:2px}
+.job-date{font-size:13px;color:var(--text-faint);margin-bottom:9px}
+.job-desc{font-size:15px;color:var(--text-dim)}
+
+/* ---------- CERTS / EDU ---------- */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media(max-width:760px){.two-col{grid-template-columns:1fr;gap:44px}}
+.cert{display:flex;gap:12px;margin-bottom:14px;font-size:15px;color:var(--text-dim)}
+.cert-tick{color:var(--good);flex-shrink:0;font-weight:700}
+.cert strong{color:var(--text);font-weight:600;display:block}
+
+/* ---------- CONTACT ---------- */
+.contact{text-align:center;padding:84px 0 72px;
+  background:linear-gradient(180deg,transparent,rgba(56,189,248,.045))}
+.contact .sec-title{font-size:33px;margin-bottom:14px}
+.contact p{color:var(--text-dim);font-size:17px;max-width:520px;margin:0 auto 30px}
+.contact .cta-row{justify-content:center;margin-bottom:0}
+
+footer{border-top:1px solid var(--border);padding:30px 0;
+  font-size:13.5px;color:var(--text-faint);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <div class="nav-name">Nouman Siddiq</div>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="status"><span class="dot"></span> Available immediately · Hyderabad, Bangalore or Remote</div>
+
+    <h1>Data Analyst who ships<br><span class="grad">decisions, not dashboards.</span></h1>
+
+    <p class="lede">
+      I turn messy, multi-table data into findings a business can act on — using
+      <strong>SQL</strong>, <strong>Python</strong> and <strong>Power BI</strong>.
+      Computer Science Engineering graduate, Google Data Analytics certified,
+      with three years running real commercial operations before I ever wrote a query.
+    </p>
+    <p class="meta">
+      That operations background is the point: I know what makes a report actually
+      useful to the person reading it, not just accurate.
+    </p>
+
+    <div class="cta-row">
+      <!-- EDIT: point href to your resume PDF once you upload it to the repo -->
+      <a class="btn btn-primary" href="Nouman_Siddiq_Resume.pdf" download>↓ Download Resume</a>
+      <a class="btn" href="mailto:itisnoumansiddiq@gmail.com">✉ Email me</a>
+      <a class="btn" href="https://linkedin.com/in/noumansiddiq" target="_blank" rel="noopener">in LinkedIn</a>
+      <a class="btn" href="https://github.com/noumansiddiq" target="_blank" rel="noopener">◆ GitHub</a>
+    </div>
+
+    <!-- EDIT: once the Olist project is finished, change "2" to "3" and you can
+         swap the Google tile for: 100K+ / Orders analysed in SQL -->
+    <div class="stats">
+      <div class="stat"><div class="stat-n">3 yrs</div><div class="stat-l">Business operations</div></div>
+      <div class="stat"><div class="stat-n">2</div><div class="stat-l">End-to-end projects shipped</div></div>
+      <div class="stat"><div class="stat-n">Google</div><div class="stat-l">Data Analytics certified</div></div>
+      <div class="stat"><div class="stat-n">B.Tech</div><div class="stat-l">CSE · JNTUH 2026</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <div class="sec-title">Three projects, three different problems.</div>
+
+    <!-- ============ PROJECT 1 — FLAGSHIP ============ -->
+    <div class="proj">
+      <div class="proj-top">
+        <div class="proj-title">E-Commerce Sales &amp; Customer Retention Analysis</div>
+        <span class="badge b-flag">Flagship</span>
+        <span class="badge b-prog">In progress</span>
+      </div>
+      <div class="proj-sub">100,000 marketplace orders · 9-table relational schema · SQL + Power BI</div>
+
+      <p class="proj-body">
+        Currently building. A marketplace is growing its top line — the question I'm framing is whether
+        it is actually <strong>healthy</strong>, because revenue growth hides a broken retention engine
+        very well. Nine normalised tables, so this gets answered in SQL rather than in a single dataframe.
+      </p>
+
+      <!-- EDIT: replace this block with your real findings once the queries are run.
+           Use the <ul class="findings"> list format from the projects below. -->
+      <p class="proj-body">
+        <strong>What I'm answering:</strong> whether delivery performance or product quality drives
+        review scores; where in the fulfilment chain delay actually accumulates; what share of customers
+        ever return; and how concentrated revenue is across sellers. Findings and the Power BI dashboard
+        land here shortly.
+      </p>
+
+      <div class="tags">
+        <span class="tag">PostgreSQL</span><span class="tag">CTEs</span><span class="tag">Window functions</span>
+        <span class="tag">NTILE / RFM</span><span class="tag">Cohort retention</span><span class="tag">Power BI</span>
+        <span class="tag">DAX</span><span class="tag">Python · pandas</span>
+      </div>
+
+      <div class="proj-links">
+        <!-- EDIT: update once the repo is live -->
+        <a href="https://github.com/noumansiddiq" target="_blank" rel="noopener">View SQL on GitHub →</a>
+      </div>
+    </div>
+
+    <!-- ============ PROJECT 2 ============ -->
+    <div class="proj">
+      <div class="proj-top">
+        <div class="proj-title">Global Tourism &amp; Air Transport Safety Forecasting</div>
+        <span class="badge b-done">Complete</span>
+      </div>
+      <div class="proj-sub">Final year major project · 4-member team · Jul 2025 – Apr 2026</div>
+
+      <p class="proj-body">
+        Does tourism demand track air transport intensity — and can it be forecast reliably?
+        I integrated six real-world datasets covering tourist arrivals and departures, air passenger
+        volumes and aviation safety indicators, then built and <strong>compared three forecasting
+        approaches</strong> rather than defending a single one.
+      </p>
+
+      <ul class="findings">
+        <li>Built a reproducible pandas preprocessing pipeline — country-name standardisation across inconsistent sources, forward/backward-fill imputation, duplicate aggregation, IQR-based outlier capping — with the rationale documented for every treatment rather than records dropped silently.</li>
+        <li>Engineered year-over-year growth rates, indexed trend series, volatility measures and lag sequences for supervised time-series learning.</li>
+        <li>Trained ARIMA, Prophet and an LSTM network, then <strong>recommended the most interpretable model</strong> for the use case — not simply the lowest error.</li>
+        <li>Presented model comparisons to an academic review panel, translating statistical output into plain language for non-specialists.</li>
+      </ul>
+
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">pandas</span><span class="tag">statsmodels</span>
+        <span class="tag">ARIMA</span><span class="tag">Prophet</span><span class="tag">LSTM · Keras</span>
+        <span class="tag">Matplotlib</span><span class="tag">Jupyter</span>
+      </div>
+
+      <div class="proj-links">
+        <a href="https://github.com/noumansiddiq/tourism-aviation-forecasting" target="_blank" rel="noopener">View repository →</a>
+      </div>
+    </div>
+
+    <!-- ============ PROJECT 3 ============ -->
+    <div class="proj">
+      <div class="proj-top">
+        <div class="proj-title">Bellabeat Wellness Case Study</div>
+        <span class="badge b-done">Complete</span>
+      </div>
+      <div class="proj-sub">Google Data Analytics Professional Certificate — Capstone</div>
+
+      <p class="proj-body">
+        Smart device usage data analysed end to end through the full six-phase framework
+        (Ask, Prepare, Process, Analyze, Share, Act), closing with marketing recommendations
+        for a wellness technology product team.
+      </p>
+
+      <ul class="findings">
+        <li>Cleaned and validated the source fitness-tracker dataset in Excel and SQL, resolving formatting inconsistencies and verifying integrity before any analysis ran.</li>
+        <li>Surfaced behavioural usage patterns and built the supporting visualisations.</li>
+        <li>Delivered a stakeholder presentation with data-backed marketing recommendations.</li>
+      </ul>
+
+      <div class="tags">
+        <span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Data cleaning</span>
+        <span class="tag">Stakeholder reporting</span>
+      </div>
+
+      <div class="proj-links">
+        <a href="https://github.com/noumansiddiq" target="_blank" rel="noopener">View case study →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Toolkit</h2>
+    <div class="sec-title">What I actually use, not what I've heard of.</div>
+
+    <div class="skills">
+      <div class="skill-card">
+        <div class="skill-h"><span>◧</span> SQL &amp; Databases</div>
+        <div class="skill-list">
+          <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Joins</span>
+          <span class="tag">CTEs</span><span class="tag">ROW_NUMBER</span><span class="tag">RANK</span>
+          <span class="tag">LAG / LEAD</span><span class="tag">NTILE</span><span class="tag">Subqueries</span>
+          <span class="tag">GROUP BY / HAVING</span><span class="tag">Query optimisation</span><span class="tag">Indexing</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-h"><span>◨</span> Python</div>
+        <div class="skill-list">
+          <span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span>
+          <span class="tag">statsmodels</span><span class="tag">scikit-learn</span><span class="tag">Prophet</span>
+          <span class="tag">Keras</span><span class="tag">Jupyter</span><span class="tag">Git / GitHub</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-h"><span>◩</span> BI &amp; Visualisation</div>
+        <div class="skill-list">
+          <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Tableau</span>
+          <span class="tag">Looker Studio</span><span class="tag">Excel · pivot tables</span>
+          <span class="tag">VLOOKUP / INDEX MATCH</span><span class="tag">Dashboard design</span><span class="tag">KPI definition</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-h"><span>◪</span> Analysis &amp; Statistics</div>
+        <div class="skill-list">
+          <span class="tag">EDA</span><span class="tag">Cohort analysis</span><span class="tag">RFM segmentation</span>
+          <span class="tag">Correlation</span><span class="tag">Trend analysis</span><span class="tag">Time series forecasting</span>
+          <span class="tag">Hypothesis testing</span><span class="tag">A/B testing</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-h"><span>◫</span> Data Preparation</div>
+        <div class="skill-list">
+          <span class="tag">Data cleaning</span><span class="tag">Wrangling</span><span class="tag">Missing value imputation</span>
+          <span class="tag">Deduplication</span><span class="tag">Outlier detection · IQR / z-score</span>
+          <span class="tag">Validation</span><span class="tag">Feature engineering</span><span class="tag">ETL concepts</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-h"><span>◬</span> Business</div>
+        <div class="skill-list">
+          <span class="tag">Requirement gathering</span><span class="tag">Stakeholder management</span>
+          <span class="tag">Data storytelling</span><span class="tag">Executive presentation</span>
+          <span class="tag">Cross-functional collaboration</span><span class="tag">Team leadership</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Track record</h2>
+    <div class="sec-title">Three years of commercial reality before the queries.</div>
+
+    <div class="exp">
+      <div class="job now">
+        <div class="job-role">Business Operations &amp; Digital Marketing</div>
+        <div class="job-org">Sanjay Numberplates, Hyderabad</div>
+        <div class="job-date">Feb 2021 – Present</div>
+        <p class="job-desc">
+          Run online order operations end to end for a legacy manufacturing business with a
+          recently launched e-commerce channel. Track order volumes, enquiry sources and channel
+          performance to inform pricing and marketing decisions, and report those trends to
+          business stakeholders as practical recommendations rather than raw numbers.
+        </p>
+      </div>
+
+      <div class="job">
+        <div class="job-role">Customer Support Associate</div>
+        <div class="job-org">Foundever — Verizon process</div>
+        <div class="job-date">Oct 2025 – Jan 2026</div>
+        <p class="job-desc">
+          High-volume, SLA-driven enterprise support. Consistently met quality assurance and
+          resolution-time targets while operating inside the strict compliance and documentation
+          standards typical of large regulated organisations.
+        </p>
+      </div>
+
+      <div class="job">
+        <div class="job-role">Operations &amp; Delivery Lead</div>
+        <div class="job-org">House of Peak</div>
+        <div class="job-date">Oct 2024 – 2025</div>
+        <p class="job-desc">
+          Owned lead generation and digital marketing delivery for client accounts from brief to
+          execution. Reported campaign performance back to clients — explaining results and
+          recommending adjustments — while coordinating concurrent engagements on schedule.
+        </p>
+      </div>
+
+      <div class="job">
+        <div class="job-role">Logistics Head, Quality Education Team</div>
+        <div class="job-org">Street Cause Hyderabad · Hyderabad Youth Assembly S13</div>
+        <div class="job-date">2024</div>
+        <p class="job-desc">
+          Top-10 fundraiser in the chapter (≈₹25,000 raised). Managed fund allocation and
+          procurement, and delivered Season 13's first completed project — a water purifier
+          installed at Zia-Ul-Islam School, inside a ₹15,000–18,000 budget.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two-col">
+    <div>
+      <h2>Credentials</h2>
+      <div class="sec-title" style="font-size:23px;margin-bottom:22px">Certifications</div>
+      <div class="cert"><span class="cert-tick">✓</span><div><strong>Google Data Analytics Professional Certificate</strong>Coursera · 8-course program with capstone</div></div>
+      <div class="cert"><span class="cert-tick">✓</span><div><strong>Build Real-World AI Applications with Gemini &amp; Imagen</strong>Google Cloud</div></div>
+      <div class="cert"><span class="cert-tick">✓</span><div><strong>Prompt Design in Vertex AI</strong>Google Cloud</div></div>
+      <div class="cert"><span class="cert-tick">✓</span><div><strong>5-Day Python Program</strong>CodingWise · 2026</div></div>
+    </div>
+
+    <div>
+      <h2>Background</h2>
+      <div class="sec-title" style="font-size:23px;margin-bottom:22px">Education</div>
+      <div class="cert"><span class="cert-tick">◆</span><div>
+        <strong>B.Tech, Computer Science Engineering</strong>
+        Swami Vivekananda Institute of Technology, JNTUH — Hyderabad<br>
+        2022 – 2026 · CGPA 7.15
+      </div></div>
+      <p style="color:var(--text-dim);font-size:15px;margin-top:14px">
+        Relevant coursework: Database Management Systems, Data Structures &amp; Algorithms,
+        Python Programming, Statistics &amp; Probability, Machine Learning, Data Mining.
+      </p>
+      <p style="color:var(--text-dim);font-size:15px;margin-top:18px">
+        <strong style="color:var(--text)">Languages:</strong> English, Hindi, Urdu
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact" style="border-top:1px solid var(--border)">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <div class="sec-title">Looking for a Data Analyst role.</div>
+    <p>
+      Hyderabad, Bangalore, or fully remote. Available to start immediately.
+      If you have a problem that needs someone who'll question the data before charting it — get in touch.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:itisnoumansiddiq@gmail.com">✉ itisnoumansiddiq@gmail.com</a>
+      <a class="btn" href="tel:+919182546004">☏ +91 91825 46004</a>
+      <a class="btn" href="https://linkedin.com/in/noumansiddiq" target="_blank" rel="noopener">in LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;width:100%">
+    <span>© 2026 Nouman Siddiq · Hyderabad, India</span>
+    <span>Built from scratch. No template.</span>
+  </div>
+</footer>
+
+<script>
+// Highlight the nav link for whichever section is currently on screen.
+const links = [...document.querySelectorAll('.nav-links a')];
+const secs  = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    links.forEach(a => {
+      const on = a.getAttribute('href') === '#' + e.target.id;
+      a.style.color = on ? 'var(--text)' : 'var(--text-dim)';
+    });
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+
+secs.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>
