@@ -4,8 +4,8 @@
 <meta name="description" content="SQL analysis of 96,478 Brazilian e-commerce orders: delivery SLA, retention, RFM segmentation and seller concentration.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232a78d6'/><text y='70' x='50' text-anchor='middle' font-size='58' font-family='sans-serif' font-weight='700' fill='%23fff'>N</text></svg>">
 <style>
-/* ---------- tokens ---------- */
-.viz-root{
+/* ---------- tokens (must live on :root so <body> inherits) ---------- */
+:root{
   color-scheme:light;
   --surface-0:#f4f4f2;   /* page */
   --surface-1:#fcfcfb;   /* card */
@@ -20,7 +20,7 @@
   --seq4:#2a78d6; --seq5:#1d5aa3; --seq6:#123a6b;
   --shadow:0 1px 2px rgba(16,15,14,.05), 0 4px 12px -4px rgba(16,15,14,.07);
 }
-:root[data-theme="dark"] .viz-root{
+:root[data-theme="dark"]{
   color-scheme:dark;
   --surface-0:#141413;
   --surface-1:#1e1e1c;
@@ -36,7 +36,7 @@
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 4px 14px -4px rgba(0,0,0,.35);
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .viz-root{
+  :root:not([data-theme="light"]){
     color-scheme:dark;
     --surface-0:#141413; --surface-1:#1e1e1c; --surface-2:#282826;
     --border:#34343180; --border-strong:#454541;
